@@ -12,13 +12,13 @@ class ExampleService {
 
     @PreAuthorize("hasAuthority('SOME.ROLE')")
     @ThrowException
-    suspend fun createExample(request: ExampleDto) : ExampleDto{
+    suspend fun createExample(request: ExampleDto): ExampleDto {
         return ExampleDto(value = "Hello world")
     }
 
     @PreAuthorize("hasAuthority('SOME.ROLE')")
     @ThrowException
-     fun createExampleReturnFlow(request: ExampleDto) : Flow<ExampleDto> {
+    fun createExampleReturnFlow(request: ExampleDto): Flow<ExampleDto> {
         return flow {
             emit(ExampleDto(value = "Hello world"))
         }

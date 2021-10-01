@@ -18,7 +18,7 @@ class ExampleController(private val exampleService: ExampleService) {
     ) = exampleService.createExample(request)
 
     @PostMapping("/flow")
-    suspend fun createExampleEntityAndReturnFlow(
+    fun createExampleEntityAndReturnFlow(
         @RequestBody
         request: ExampleDto
     ) = exampleService.createExampleReturnFlow(request)

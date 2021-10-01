@@ -12,7 +12,7 @@ import org.springframework.web.reactive.function.BodyInserters
 
 @SpringBootTest
 @AutoConfigureWebTestClient
-class SecurityTestIT {
+class SecurityTest {
 
     @Autowired
     private lateinit var client: WebTestClient
